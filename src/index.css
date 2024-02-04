@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+
 body {
   margin: 0;
   font-family: "Roboto";
@@ -10,12 +11,14 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  background-color: #85a8c5;
+  background-color: #fff;
 }
 
 .carousel {
   overflow: hidden;
-  width: 700px;
+  width: 55vw;
+  
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,16 +35,19 @@ body {
   align-items: center;
   justify-content: center;
   height: 490px;
-  background-color: #fff;
+  background-color:#E0E0E0;
 }
 
 .carousel-item-text {
-  font-size: 1.15rem;
+  font-size: 15px;
   margin: 40px 0 40px 0;
   padding: 0 20px 0 20px;
   white-space: normal;
-  color: #617d98;
+  color: black;
+  text-align:left;
+
 }
+
 .carousel-img {
   width: 250px;
   padding: 0 20px 0 20px;
@@ -57,8 +63,18 @@ body {
 .button-arrow {
   background: none;
   border: none;
+  font-size: 40px;
   cursor: pointer;
   margin-top: 20px;
+}
+
+.button-arrow:hover {
+  border: none;
+  color: blue;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 30px;
+
 }
 
 .indicators {
@@ -73,15 +89,157 @@ body {
   cursor: pointer;
 }
 
-.indicators > button {
+.indicators>button {
   margin: 5px;
   background: none;
 }
 
 .indicator-symbol {
-  color: #26343f;
+  color: rgb(0, 102, 255);
 }
 
 .indicator-symbol-active {
-  color: #ffffff;
+  color: rgb(0, 102, 255);
+  font-size: 30px;
+}
+.text-container{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  width:30vw;
+ text-align:center;
+}
+.our-text{
+  background-color:black;
+  color:white;
+  padding:2px 4px;
+  border-radius:9px 0px 0px 9px;
+}
+.work-text{
+  color: blue;
+}
+.para{
+  font-size:16px;
+  font-family:Roboto;
+  color:black;
+}
+.card1{
+  width:350px;
+  height:300px;
+  background-color:violet;
+  shadow:1px;
+  padding:15px;
+  border-radius:15px;
+  position:absolute;
+  top:650px;
+  left:30px
+}
+.hh{
+  padding: 10px;
+  background-color:blue;
+  border-radius:15px;
+  border-color:none;
+  color:white;
+}
+
+@media only screen and (max-width:768px) {
+ 
+  .carousel-item {
+    height: 400px;
+    text-align:center;
+  }
+  .card1{
+    position:absolute;
+    margin-top:1000px;
+  }
+
+  .carousel-item-text {
+    font-size: 0.9rem;
+    padding: 0 5px;
+  }
+
+  .button-arrow {
+    font-size: 25px;
+    margin-top: 5px;
+  }
+
+  .indicator-symbol-active {
+    font-size: 15px;
+  }
+
+  .carousel {
+    
+    width: 80vw;
+  
+  }
+  .text-container{
+    width:80vw
+  }
+}
+
+.services-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.title {
+  font-size: 30px;
+  align-self: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.service-list {
+  display: flex;
+  flex-direction: row;
+    /* Ensure items wrap to the next line */
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .service-list {
+    flex-direction: column;
+  }
+}
+.service-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  
+
+ 
+
+
+}
+
+.service-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.greenLine{
+  height: 5px;
+  border-radius: 7px;
+  width:100%;
+  background-color: green;
+
+}
+.service-details {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  text-align: center;
 }
