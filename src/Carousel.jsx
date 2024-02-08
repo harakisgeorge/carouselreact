@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { CarouselItem } from "./CarouselItem";
+import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import { FaRegCircleDot } from "react-icons/fa6";
+import { SlArrowLeftCircle } from "react-icons/sl";
 export const Carousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const items = [
@@ -35,8 +38,9 @@ export const Carousel = () => {
     <div className="carousel">
       <div
         className="inner"
-        style={{ transform: `translate(-${activeIndex * 100}%)`
-     }}
+        style={{
+          transform: `translate(-${activeIndex * 100}%)`
+        }}
       >
         {items.map((item) => {
           return <CarouselItem item={item} width={"100%"} />;
@@ -50,7 +54,9 @@ export const Carousel = () => {
             updateIndex(activeIndex - 1);
           }}
         >
-          <span class="material-symbols-outlined">arrow_back_ios</span>{" "}
+          <span class="material-symbols-outlined">
+            <SlArrowLeftCircle />
+          </span>{" "}
         </button>
         <div className="indicators">
           {items.map((item, index) => {
@@ -62,13 +68,13 @@ export const Carousel = () => {
                 }}
               >
                 <span
-                  className={`material-symbols-outlined ${
-                    index === activeIndex
-                      ? "indicator-symbol-active"
-                      : "indicator-symbol"
-                  }`}
+                  className={`material-symbols-outlined ${index === activeIndex
+                    ? "indicator-symbol-active"
+                    : "indicator-symbol"
+                    }`}
                 >
-                  radio_button_checked
+                  <FaRegCircleDot />
+
                 </span>
               </button>
             );
@@ -80,7 +86,9 @@ export const Carousel = () => {
             updateIndex(activeIndex + 1);
           }}
         >
-          <span class="material-symbols-outlined">arrow_forward_ios</span>
+          <span class="material-symbols-outlined">
+            <IoArrowForwardCircleOutline />
+          </span>
         </button>
       </div>
     </div>

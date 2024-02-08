@@ -6,6 +6,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+## Installing Packages
+
+1.  Make sure you have installed the react-responsive-carousel package and that it includes the required styles.
+
+npm install react-responsive-carousel
+
+2. Make sure you have the Ant Design library installed in your project. You can install it using:
+
+   npm install antd
+
 ### `npm start`
 
 Runs the app in the development mode.\
